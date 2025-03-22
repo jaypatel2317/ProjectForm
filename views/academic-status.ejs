@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Status Form</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Academic Status Form</h1>
+    </header>
+
+    <main>
+        <form>
+            <label for="student-name">Student Name:</label>
+            <input type="text" id="student-name" name="student-name" value="<%= student.first_name %> <%= student.last_name %>" readonly>
+
+            <label for="student-id">Student ID:</label>
+            <input type="text" id="student-id" name="student-id" value="<%= student.student_id %>" readonly>
+
+            <label for="program">Program:</label>
+            <input type="text" id="program" name="program" value="<%= student.program %>" readonly>
+
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+</body>
+</html>

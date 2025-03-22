@@ -1,0 +1,38 @@
+<form>
+    <h2>Program Adjustment Form</h2>
+
+    <label for="last-name">Last Name:</label>
+    <input type="text" id="last-name" name="last-name" value="{{LAST_NAME}}" required>
+
+    <label for="first-name">First Name:</label>
+    <input type="text" id="first-name" name="first-name" value="{{FIRST_NAME}}" required>
+
+    <label for="student-id">Student ID No.:</label>
+    <input type="text" id="student-id" name="student-id" value="{{STUDENT_ID}}" required>
+
+    <label for="date">Date (Day/Month/Year):</label>
+    <input type="date" id="date" name="date" value="{{TODAY_DATE}}" required>
+
+    <label for="program-name">Program Name:</label>
+    <input type="text" id="program-name" name="program-name" value="{{COURSE_NAME}}" required>
+
+    <label for="campus">Campus:</label>
+    <input type="text" id="campus" name="campus" value="{{CAMPUS}}" required>
+
+    <h3>Withdrawal</h3>
+    <label for="withdraw-date">Effective Date:</label>
+    <input type="date" id="withdraw-date" name="withdraw-date" value="{{EXPECTED_COMPLETION}}">
+
+    <h3>Additional Courses</h3>
+    <table>
+        <tr>
+            <th>Course Code</th>
+            <th>Course Name</th>
+            <th>Semester</th>
+            <th>Hours per Week</th>
+        </tr>
+        {{COURSE_LIST}}
+    </table>
+
+    <button type="submit">Submit</button>
+</form>

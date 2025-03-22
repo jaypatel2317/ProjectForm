@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Form Generator</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Student Form Generator</h1>
+    </header>
+
+    <main>
+        <form action="/generate" method="POST">
+            <label for="studentId">Student ID:</label>
+            <input type="text" id="studentId" name="studentId" required>
+
+            <label for="formSelection">Select Form:</label>
+            <select id="formSelection" name="formSelection">
+                <option value="academic-status">Academic Status Form</option>
+                <option value="out-of-sequence">Out of Sequence Studies</option>
+                <option value="program-adjustment">Program Adjustment Form</option>
+            </select>
+
+            <button type="submit">Generate</button>
+        </form>
+    </main>
+</body>
+</html>

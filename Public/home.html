@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Form Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Student Form Generator</h1>
+    </header>
+
+    <main>
+        <form id="form-selection">
+            <label for="studentId">Student ID:</label>
+            <input type="text" id="studentId" name="studentId" required>
+
+            <label for="formSelection">Select Form:</label>
+            <select id="formSelection" name="formSelection">
+                <option value="academic-status">Academic Status Form</option>
+                <option value="out-of-sequence">Out of Sequence Studies</option>
+                <option value="program-adjustment">Program Adjustment Form</option>
+            </select>
+
+            <button type="button" id="generate">Generate</button>
+        </form>
+    </main>
+
+    <!-- Modal for displaying the form -->
+    <div id="formModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="formContainer"></div>
+            <button id="printPdfBtn">Print as PDF</button>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const generatePdfBtn = document.getElementById('generate-pdf-btn');
+            if (generatePdfBtn) {
+                generatePdfBtn.addEventListener('click', function() {
+                    console.log("Generate PDF button clicked!");
+                    const formHtml = document.querySelector('form').outerHTML;
+                    console.log("Form HTML:", formHtml);
+                    //fetch code commented out.
+                    //fetch('/generate-pdf', {
+                    //    method: 'POST',
+                    //    headers: { 'Content-Type': 'application/json' },
+                    //    body: JSON.stringify({ formHtml, studentName: '${student.first_name} ${student.last_name}', formType: '${formType}' })
+                    //})
+                    //.then(response => response.json())
+                    //.then(data => {
+                    //    if (data.success) window.open(data.pdfUrl, '_blank');
+                    //    else alert('Error generating PDF: ' + data.error);
+                    //})
+                    //.catch(error => alert('Error generating PDF.'));
+                });
+            } else {
+                console.log("Generate PDF button not found");
+            }
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

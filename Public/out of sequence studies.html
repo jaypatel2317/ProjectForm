@@ -1,0 +1,37 @@
+<form>
+    <h2>Academic Status Form</h2>
+
+    <label for="student-name">Student Name:</label>
+    <input type="text" id="student-name" name="student-name" value="{{STUDENT_NAME}}" required>
+
+    <label for="student-id">Student ID:</label>
+    <input type="text" id="student-id" name="student-id" value="{{STUDENT_ID}}" required>
+
+    <label for="program">Program:</label>
+    <input type="text" id="program" name="program" value="{{COURSE_NAME}}" required>
+
+    <label for="completion-date">Program Completion Date:</label>
+    <input type="date" id="completion-date" name="completion-date" value="{{EXPECTED_COMPLETION}}">
+
+    <label for="withdrawal-reason">Reason for Withdrawal:</label>
+    <select name="withdrawal-reason" id="withdrawal-reason">
+        <option value="failed-requirements">Failed Requirements</option>
+        <option value="program-difficulty">Program Difficulty</option>
+        <option value="personal">Personal</option>
+        <option value="child-care">Child Care</option>
+        <option value="financial">Financial</option>
+        <option value="employment">Employment</option>
+        <option value="other">Other</option>
+    </select>
+
+    <label for="grades-entered">Have all outstanding grades been entered?</label>
+    <input type="radio" name="grades-entered" value="yes"> Yes
+    <input type="radio" name="grades-entered" value="no"> No
+
+    <label for="refund-policy">
+        <input type="checkbox" id="refund-policy" name="refund-policy" required>
+        I have read and understand that refund policy will be applied accordingly.
+    </label>
+
+    <button type="submit">Submit</button>
+</form>
